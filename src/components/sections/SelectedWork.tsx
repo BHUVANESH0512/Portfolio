@@ -10,15 +10,14 @@ export const SelectedWork = () => {
           <div className="col-span-12 md:col-span-4">
             <div className="md:sticky md:top-24">
               <p className="mono-label">§ 02 — Projects</p>
+              <h2 className="mt-6 font-display text-3xl leading-tight tracking-[-0.02em] md:text-4xl text-pretty">
+                Work that reflects my product thinking and human‑centered approach
+              </h2>
             </div>
           </div>
           
           <div className="col-span-12 md:col-span-8">
-            <h2 className="font-display text-3xl leading-tight tracking-[-0.02em] sm:text-4xl md:text-5xl text-balance">
-              Three projects that capture how I think about products, systems, and the people who use them.
-            </h2>
-            
-            <ul className="hairline mt-12">
+            <ul className="hairline md:mt-2">
               {projects.map((p) => (
                 <li key={p.slug} className="border-b border-rule">
                   <Link

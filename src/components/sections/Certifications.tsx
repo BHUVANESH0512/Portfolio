@@ -13,7 +13,7 @@ export const Certifications = () => {
         <div className="grid grid-cols-12 gap-x-10 gap-y-8">
           <div className="col-span-12 md:col-span-4">
             <div className="md:sticky md:top-24">
-              <p className="mono-label">§ 04 — Certifications</p>
+              <p className="mono-label">§ 03 — Certifications</p>
             </div>
           </div>
           <div className="col-span-12 md:col-span-8">

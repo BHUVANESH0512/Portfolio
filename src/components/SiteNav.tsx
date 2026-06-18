@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom";
-import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   { href: "#work", label: "Work" },
@@ -40,7 +39,6 @@ export const SiteNav = () => {
           >
             Get in touch
           </a>
-          <ThemeToggle />
         </div>
       </div>
     </header>

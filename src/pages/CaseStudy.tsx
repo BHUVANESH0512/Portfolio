@@ -59,6 +59,18 @@ const CaseStudy = () => {
                 <p className="text-lg leading-relaxed text-muted-foreground text-pretty">
                   {project.description}
                 </p>
+                {project.github && (
+                  <div className="mt-6">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground hover:text-primary transition-colors border-b border-foreground/30 pb-0.5"
+                    >
+                      View Repository <ArrowUpRight className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </div>

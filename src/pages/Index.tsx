@@ -1,7 +1,6 @@
 import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/sections/Hero";
-import { Metrics } from "@/components/sections/Metrics";
 import { SelectedWork } from "@/components/sections/SelectedWork";
 import { Certifications } from "@/components/sections/Certifications";
 import { StartupJourney } from "@/components/sections/StartupJourney";
@@ -18,9 +17,6 @@ const Index = () => {
         <Hero />
         <FadeIn>
           <SelectedWork />
-        </FadeIn>
-        <FadeIn>
-          <Metrics />
         </FadeIn>
         <FadeIn>
           <Certifications />

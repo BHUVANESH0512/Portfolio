@@ -27,7 +27,7 @@ export const Contact = () => {
       <div className="editorial-container pt-24 pb-12 md:pt-36 md:pb-16">
         <div className="flex flex-col">
           <div className="border-b border-rule pb-4 mb-12">
-            <p className="mono-label">§ 08 — Contact</p>
+            <p className="mono-label">§ 07 — Contact</p>
           </div>
           
           <h2 className="font-display text-5xl leading-[1.02] tracking-[-0.025em] sm:text-6xl md:text-7xl lg:text-[80px] text-primary text-balance animate-rise">
