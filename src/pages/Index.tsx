@@ -8,6 +8,7 @@ import { StartupJourney } from "@/components/sections/StartupJourney";
 import { Skills } from "@/components/sections/Skills";
 import { Writing } from "@/components/sections/Writing";
 import { Contact } from "@/components/sections/Contact";
+import { FadeIn } from "@/components/FadeIn";
 
 const Index = () => {
   return (
@@ -15,13 +16,27 @@ const Index = () => {
       <SiteNav />
       <main>
         <Hero />
-        <SelectedWork />
-        <Metrics />
-        <Certifications />
-        <Skills />
-        <Writing />
-        <StartupJourney />
-        <Contact />
+        <FadeIn>
+          <SelectedWork />
+        </FadeIn>
+        <FadeIn>
+          <Metrics />
+        </FadeIn>
+        <FadeIn>
+          <Certifications />
+        </FadeIn>
+        <FadeIn>
+          <Skills />
+        </FadeIn>
+        <FadeIn>
+          <Writing />
+        </FadeIn>
+        <FadeIn>
+          <StartupJourney />
+        </FadeIn>
+        <FadeIn>
+          <Contact />
+        </FadeIn>
       </main>
       <Footer />
     </div>

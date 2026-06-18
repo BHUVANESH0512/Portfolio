@@ -24,7 +24,7 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="scroll-mt-24 border-t border-rule bg-background text-foreground">
-      <div className="editorial-container py-24 md:py-36">
+      <div className="editorial-container pt-24 pb-12 md:pt-36 md:pb-16">
         <div className="flex flex-col">
           <div className="border-b border-rule pb-4 mb-12">
             <p className="mono-label">§ 08 — Contact</p>
