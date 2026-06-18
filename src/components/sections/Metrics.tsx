@@ -11,10 +11,12 @@ export const Metrics = () => {
       <div className="editorial-container py-16 md:py-24">
         <div className="grid grid-cols-12 gap-x-10 gap-y-10">
           <div className="col-span-12 md:col-span-3">
-            <p className="mono-label">§ <span className="font-bold">03</span></p>
-            <h2 className="mt-4 font-display text-2xl leading-tight tracking-[-0.015em]">
-              A short ledger of the last few years.
-            </h2>
+            <div className="md:sticky md:top-24">
+              <p className="mono-label">§ <span className="font-bold">03</span></p>
+              <h2 className="mt-4 font-display text-2xl leading-tight tracking-[-0.015em]">
+                A short ledger of the last few years.
+              </h2>
+            </div>
           </div>
           <div className="col-span-12 md:col-span-9">
             <dl className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">

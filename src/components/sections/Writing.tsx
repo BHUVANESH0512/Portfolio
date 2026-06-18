@@ -28,13 +28,15 @@ export const Writing = () => {
       <div className="editorial-container py-20 md:py-28">
         <div className="grid grid-cols-12 gap-x-10 gap-y-6">
           <div className="col-span-12 md:col-span-4">
-            <p className="mono-label">§ 06 — Journal</p>
-            <h2 className="mt-6 font-display text-3xl leading-tight tracking-[-0.02em] md:text-4xl">
-              Writing & insights.
-            </h2>
-            <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-              Slow essays on the work — published when they are ready, not before.
-            </p>
+            <div className="md:sticky md:top-24">
+              <p className="mono-label">§ 06 — Journal</p>
+              <h2 className="mt-6 font-display text-3xl leading-tight tracking-[-0.02em] md:text-4xl">
+                Writing & insights.
+              </h2>
+              <p className="mt-4 max-w-sm text-sm text-muted-foreground">
+                Slow essays on the work — published when they are ready, not before.
+              </p>
+            </div>
           </div>
 
           <div className="col-span-12 md:col-span-8">

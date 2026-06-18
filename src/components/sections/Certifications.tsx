@@ -12,7 +12,9 @@ export const Certifications = () => {
       <div className="editorial-container py-20 md:py-28">
         <div className="grid grid-cols-12 gap-x-10 gap-y-8">
           <div className="col-span-12 md:col-span-4">
-            <p className="mono-label">§ 04 — Certifications</p>
+            <div className="md:sticky md:top-24">
+              <p className="mono-label">§ 04 — Certifications</p>
+            </div>
           </div>
           <div className="col-span-12 md:col-span-8">
             <ul className="divide-y divide-rule border-t border-b border-rule">
