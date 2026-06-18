@@ -8,7 +8,7 @@ export const SelectedWork = () => {
       <div className="editorial-container pt-24 md:pt-32 pb-8">
         <div className="grid grid-cols-12 gap-x-10 gap-y-6">
           <div className="col-span-12 md:col-span-4">
-            <p className="mono-label">§ 03 — Selected work</p>
+            <p className="mono-label">§ 02 — Selected work</p>
           </div>
           <div className="col-span-12 md:col-span-8">
             <h2 className="font-display text-3xl leading-tight tracking-[-0.02em] sm:text-4xl md:text-5xl text-balance">

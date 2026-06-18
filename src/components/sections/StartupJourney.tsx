@@ -11,7 +11,7 @@ export const StartupJourney = () => {
       <div className="editorial-container py-20 md:py-28">
         <div className="grid grid-cols-12 gap-x-10 gap-y-10">
           <div className="col-span-12 md:col-span-5">
-            <p className="mono-label">§ 04 — A founder's notebook</p>
+            <p className="mono-label">§ 06 — A founder's notebook</p>
             <h2 className="mt-6 font-display text-4xl leading-tight tracking-[-0.02em] md:text-5xl">
               LEP Skill Lab
             </h2>

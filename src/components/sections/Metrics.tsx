@@ -1,6 +1,6 @@
 const stats = [
-  { value: "02", label: "IEEE Papers", note: "Peer-reviewed publications" },
-  { value: "03+", label: "Major Projects", note: "Production & research" },
+  { value: "02", label: "IEEE Papers", note: "Published" },
+  { value: "08+", label: "Major Projects", note: "Production & research" },
   { value: "01", label: "Hackathon Prize", note: "National recognition" },
   { value: "05+", label: "Certifications", note: "AI, cloud, systems" },
 ];
@@ -11,7 +11,7 @@ export const Metrics = () => {
       <div className="editorial-container py-16 md:py-24">
         <div className="grid grid-cols-12 gap-x-10 gap-y-10">
           <div className="col-span-12 md:col-span-3">
-            <p className="mono-label">§ 02 — In numbers</p>
+            <p className="mono-label">§ <span className="font-bold">03</span></p>
             <h2 className="mt-4 font-display text-2xl leading-tight tracking-[-0.015em]">
               A short ledger of the last few years.
             </h2>

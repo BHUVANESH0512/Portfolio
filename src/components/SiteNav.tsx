@@ -3,9 +3,9 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   { href: "#work", label: "Work" },
-  { href: "#journey", label: "Journey" },
   { href: "#skills", label: "Skills" },
   { href: "#writing", label: "Writing" },
+  { href: "#journey", label: "Journey" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -18,7 +18,7 @@ export const SiteNav = () => {
       <div className="editorial-container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
           <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">BR</span>
-          <span className="hidden font-display text-sm font-medium sm:inline">Bhuvanesh Ravi</span>
+          <span className="hidden font-display text-sm font-medium sm:inline">Bhuvanesh</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

@@ -2,7 +2,6 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { getProject, projects } from "@/lib/projects";
 import { SiteNav } from "@/components/SiteNav";
-import { Footer } from "@/components/Footer";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 const CaseStudy = () => {
@@ -11,7 +10,7 @@ const CaseStudy = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (project) document.title = `${project.title} — Bhuvanesh Ravi`;
+    if (project) document.title = `${project.title} — Bhuvanesh`;
   }, [project]);
 
   if (!project) {
@@ -118,8 +117,6 @@ const CaseStudy = () => {
           </Link>
         </div>
       </article>
-
-      <Footer />
     </div>
   );
 };

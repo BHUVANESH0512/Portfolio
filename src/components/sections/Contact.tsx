@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 
 const channels = [
-  { label: "Email", value: "contact@bhuvaneshravi.dev", href: "mailto:contact@bhuvaneshravi.dev" },
+  { label: "Email", value: "bhuvaneshravi1957@gmail.com", href: "mailto:bhuvaneshravi1957@gmail.com" },
   { label: "GitHub", value: "github.com/BHUVANESH0512", href: "https://github.com/BHUVANESH0512" },
   { label: "LinkedIn", value: "linkedin.com/in/bhuvaneshravi57", href: "https://www.linkedin.com/in/bhuvaneshravi57/" },
 ];
@@ -22,7 +22,7 @@ export const Contact = () => {
               like the kind of thing you're working on, I'd like to hear about it.
             </p>
             <a
-              href="mailto:contact@bhuvaneshravi.dev"
+              href="mailto:bhuvaneshravi1957@gmail.com"
               className="mt-12 inline-flex items-center gap-3 border-b border-primary-foreground/40 pb-1 font-display text-lg transition-colors hover:border-primary-foreground"
             >
               Start a conversation
