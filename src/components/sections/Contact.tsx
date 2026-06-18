@@ -1,56 +1,68 @@
-import { ArrowUpRight } from "lucide-react";
-
-const channels = [
-  { label: "Email", value: "bhuvaneshravi1957@gmail.com", href: "mailto:bhuvaneshravi1957@gmail.com" },
-  { label: "GitHub", value: "github.com/BHUVANESH0512", href: "https://github.com/BHUVANESH0512" },
-  { label: "LinkedIn", value: "linkedin.com/in/bhuvaneshravi57", href: "https://www.linkedin.com/in/bhuvaneshravi57/" },
-];
+import { Mail, Github, Linkedin, ArrowUpRight } from "lucide-react";
 
 export const Contact = () => {
-  return (
-    <section id="contact" className="scroll-mt-24 border-t border-rule bg-primary text-primary-foreground">
-      <div className="editorial-container py-24 md:py-36">
-        <div className="grid grid-cols-12 gap-x-10 gap-y-12">
-          <div className="col-span-12 md:col-span-7">
-            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-primary-foreground/60">§ 07 — Contact</p>
-            <h2 className="mt-8 font-display text-5xl leading-[1.02] tracking-[-0.025em] md:text-7xl text-balance">
-              Let's build something meaningful.
-            </h2>
-            <p className="mt-8 max-w-xl text-lg leading-relaxed text-primary-foreground/75 text-pretty">
-              I take on a small number of collaborations each year — research, founding work,
-              and product engagements where care for the craft is shared. If that sounds
-              like the kind of thing you're working on, I'd like to hear about it.
-            </p>
-            <a
-              href="mailto:bhuvaneshravi1957@gmail.com"
-              className="mt-12 inline-flex items-center gap-3 border-b border-primary-foreground/40 pb-1 font-display text-lg transition-colors hover:border-primary-foreground"
-            >
-              Start a conversation
-              <ArrowUpRight className="h-4 w-4" />
-            </a>
-          </div>
+  const contacts = [
+    {
+      label: "EMAIL",
+      value: "bhuvaneshravi1957@gmail.com",
+      href: "mailto:bhuvaneshravi1957@gmail.com",
+      icon: <Mail className="h-6 w-6 text-primary" />,
+    },
+    {
+      label: "GITHUB",
+      value: "@BHUVANESH0512",
+      href: "https://github.com/BHUVANESH0512",
+      icon: <Github className="h-6 w-6 text-primary" />,
+    },
+    {
+      label: "LINKEDIN",
+      value: "in/bhuvaneshravi57",
+      href: "https://www.linkedin.com/in/bhuvaneshravi57/",
+      icon: <Linkedin className="h-6 w-6 text-primary" />,
+    },
+  ];
 
-          <div className="col-span-12 md:col-span-5 md:pt-8">
-            <ul className="divide-y divide-primary-foreground/15 border-y border-primary-foreground/15">
-              {channels.map((c) => (
-                <li key={c.label}>
-                  <a
-                    href={c.href}
-                    target={c.href.startsWith("http") ? "_blank" : undefined}
-                    rel="noreferrer"
-                    className="group flex items-center justify-between py-5"
-                  >
-                    <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-primary-foreground/60">
-                      {c.label}
-                    </span>
-                    <span className="flex items-center gap-3 font-display text-base">
-                      {c.value}
-                      <ArrowUpRight className="h-4 w-4 opacity-60 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
-                    </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+  return (
+    <section id="contact" className="scroll-mt-24 border-t border-rule bg-background text-foreground">
+      <div className="editorial-container py-24 md:py-36">
+        <div className="flex flex-col">
+          <div className="border-b border-rule pb-4 mb-12">
+            <p className="mono-label">§ 08 — Contact</p>
+          </div>
+          
+          <h2 className="font-display text-5xl leading-[1.02] tracking-[-0.025em] sm:text-6xl md:text-7xl lg:text-[80px] text-primary text-balance animate-rise">
+            Let's build something durable.
+          </h2>
+          
+          <p className="mt-8 max-w-2xl text-lg md:text-xl leading-relaxed text-muted-foreground text-pretty animate-rise">
+            I take on a small number of collaborations each year — research, founding work,
+            and product engagements where care for the craft is shared. If that sounds
+            like the kind of thing you're working on, I'd like to hear about it.
+          </p>
+          
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 border border-rule divide-y sm:divide-y-0 sm:divide-x divide-rule rounded-sm bg-card/10 overflow-hidden">
+            {contacts.map((c) => (
+              <a
+                key={c.label}
+                href={c.href}
+                target={c.href.startsWith("http") ? "_blank" : undefined}
+                rel="noreferrer"
+                className="group flex flex-col justify-between p-8 md:p-10 h-48 md:h-56 hover:bg-muted/30 transition-all duration-300"
+              >
+                <div className="flex justify-between items-start">
+                  {c.icon}
+                  <ArrowUpRight className="h-5 w-5 text-muted-foreground/60 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
+                </div>
+                <div>
+                  <span className="font-mono text-[11px] tracking-[0.2em] text-muted-foreground/80 block">
+                    {c.label}
+                  </span>
+                  <span className="font-display text-lg md:text-xl font-medium text-foreground mt-2 block break-all group-hover:text-primary transition-colors duration-300">
+                    {c.value}
+                  </span>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </div>

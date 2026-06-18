@@ -43,7 +43,7 @@ export const Skills = () => {
       <div className="editorial-container py-20 md:py-28">
         <div className="grid grid-cols-12 gap-x-10 gap-y-6">
           <div className="col-span-12 md:col-span-4">
-            <p className="mono-label">§ 04 — Practice areas</p>
+            <p className="mono-label">§ 05 — Practice areas</p>
             <h2 className="mt-6 font-display text-3xl leading-tight tracking-[-0.02em] md:text-4xl">
               The tools and methods I lean on.
             </h2>
