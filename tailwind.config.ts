@@ -7,10 +7,21 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
-      screens: { "2xl": "1400px" },
+      padding: "1rem",
+      screens: {
+        "sm": "640px",
+        "md": "768px",
+        "lg": "1024px",
+        "xl": "1280px",
+        "2xl": "1400px",
+      },
     },
     extend: {
+      screens: {
+        "xs": "320px",
+        "sm": "375px",
+        "md": "425px",
+      },
       fontFamily: {
         display: ['"IBM Plex Sans"', "system-ui", "sans-serif"],
         body: ['"Source Sans 3"', "system-ui", "sans-serif"],
@@ -74,6 +85,12 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      spacing: {
+        "safe-left": "max(1rem, env(safe-area-inset-left))",
+        "safe-right": "max(1rem, env(safe-area-inset-right))",
+        "safe-top": "max(1rem, env(safe-area-inset-top))",
+        "safe-bottom": "max(1rem, env(safe-area-inset-bottom))",
       },
     },
   },
