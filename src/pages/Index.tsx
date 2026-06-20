@@ -11,24 +11,28 @@ import { Contact } from "@/components/sections/Contact";
 import { FadeIn } from "@/components/FadeIn";
 import { IntroSplash } from "@/components/IntroSplash";
 
+// Module-level flag: resets on every page load (refresh or new tab)
+// so the Hello! splash always plays when the page is freshly opened.
+let _splashPlayed = false;
+
 const Index = () => {
-  const isSplashSeen = typeof window !== "undefined" && sessionStorage.getItem("splash-seen") === "true";
-  const [showSplash, setShowSplash] = useState(!isSplashSeen);
-  const [heroVisible, setHeroVisible] = useState(isSplashSeen);
+  const [showSplash, setShowSplash] = useState(!_splashPlayed);
+  const [heroVisible, setHeroVisible] = useState(_splashPlayed);
 
   useEffect(() => {
-    if (isSplashSeen) return;
+    if (_splashPlayed) return;
 
     // The splash screen animations run up to 3.9s, then it fades out over 0.8s.
     // It is fully invisible and removed from the DOM after 3.9s + 0.8s = 4.7s.
     const splashTimeout = setTimeout(() => {
       setShowSplash(false);
       setHeroVisible(true);
-      sessionStorage.setItem("splash-seen", "true");
+      _splashPlayed = true;
     }, 4700);
 
     return () => clearTimeout(splashTimeout);
-  }, [isSplashSeen]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Scroll to hash anchor when navigating back from a case study (e.g. /#work)
   useEffect(() => {

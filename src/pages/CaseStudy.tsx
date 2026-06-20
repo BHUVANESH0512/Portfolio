@@ -16,7 +16,6 @@ const CaseStudy = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     if (project) document.title = `${project.title} — Bhuvanesh`;
-    sessionStorage.setItem("splash-seen", "true");
   }, [project]);
 
   if (!project) {
