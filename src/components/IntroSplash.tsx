@@ -121,11 +121,42 @@ export const IntroSplash = () => {
           animation: fadeOutSplash 0.8s ease-in-out forwards;
           animation-delay: 3.9s;
         }
+
+        /* Mobile-first responsive scaling */
+        @media (max-width: 374px) {
+          .splash-text-mobile {
+            font-size: 2rem;
+          }
+          .splash-svg-mobile {
+            width: 120px;
+            height: 40px;
+          }
+        }
+
+        @media (min-width: 375px) and (max-width: 640px) {
+          .splash-text-mobile {
+            font-size: clamp(2.5rem, 12vw, 3.5rem);
+          }
+          .splash-svg-mobile {
+            width: clamp(140px, 50vw, 180px);
+            height: auto;
+          }
+        }
+
+        @media (min-width: 641px) {
+          .splash-text-mobile {
+            font-size: 5rem;
+          }
+          .splash-svg-mobile {
+            width: 240px;
+            height: 60px;
+          }
+        }
       `}</style>
 
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center px-4">
         {/* Hello! Text Block */}
-        <div className="flex items-baseline font-display text-[72px] sm:text-[100px] md:text-[140px] font-bold tracking-tight leading-none">
+        <div className="flex items-baseline font-display splash-text-mobile font-bold tracking-tight leading-none flex-shrink-0">
           <div className="overflow-hidden h-[1.15em] flex items-end">
             <span className="animate-hello inline-block text-white">Hello</span>
           </div>
@@ -133,7 +164,7 @@ export const IntroSplash = () => {
         </div>
 
         {/* Smile Arc and dots SVG */}
-        <svg width="240" height="60" viewBox="0 0 240 60" className="mt-4 overflow-visible">
+        <svg viewBox="0 0 240 60" className="splash-svg-mobile mt-4 overflow-visible">
           {/* Smile Path */}
           <path
             d="M 40 20 Q 120 55 200 20"
