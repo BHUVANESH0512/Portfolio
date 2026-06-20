@@ -120,12 +120,49 @@
 }
 
 @layer components {
+  /* Mobile-first responsive container with progressive padding */
   .editorial-container {
-    @apply mx-auto w-full max-w-[1280px] px-6 md:px-10 lg:px-16;
+    @apply mx-auto w-full max-w-[1280px];
+    padding-left: 1rem;   /* 320px - 1rem (16px) */
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 375px) {
+    .editorial-container {
+      padding-left: 1.25rem;  /* 375px+ - 1.25rem (20px) */
+      padding-right: 1.25rem;
+    }
+  }
+  
+  @media (min-width: 425px) {
+    .editorial-container {
+      padding-left: 1.5rem;   /* 425px+ - 1.5rem (24px) */
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .editorial-container {
+      padding-left: 2.5rem;   /* 768px+ (md) - 2.5rem (40px) */
+      padding-right: 2.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .editorial-container {
+      padding-left: 4rem;     /* 1024px+ (lg) - 4rem (64px) */
+      padding-right: 4rem;
+    }
   }
 
   .mono-label {
-    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground;
+    @apply font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground;
+  }
+  
+  @media (min-width: 768px) {
+    .mono-label {
+      @apply text-[11px];
+    }
   }
 
   .hairline {
@@ -143,11 +180,29 @@
   .link-underline:hover::after {
     @apply origin-left scale-x-100;
   }
+
+  /* Mobile-optimized touch targets */
+  .touch-target {
+    @apply min-h-12 min-w-12;
+  }
 }
 
 @layer utilities {
   .text-balance { text-wrap: balance; }
   .text-pretty { text-wrap: pretty; }
+
+  /* Mobile-first typography scale */
+  @media (max-width: 374px) {
+    .text-sm {
+      @apply text-[13px];
+    }
+    .text-base {
+      @apply text-[14px];
+    }
+    .text-lg {
+      @apply text-[15px];
+    }
+  }
 }
 
 @keyframes rise {
@@ -155,3 +210,23 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 .animate-rise { animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+
+/* Splash Screen Mobile Optimization */
+@media (max-width: 640px) {
+  .splash-hello {
+    font-size: clamp(2.5rem, 15vw, 4rem) !important;
+  }
+  
+  .splash-svg {
+    width: clamp(120px, 60vw, 200px) !important;
+    height: auto;
+  }
+}
+
+/* Grid Gap Responsive Optimization */
+@media (max-width: 374px) {
+  .gap-x-4 { gap-left: 0.75rem; gap-right: 0.75rem; }
+  .gap-y-4 { gap-top: 0.75rem; gap-bottom: 0.75rem; }
+  .gap-y-6 { gap-top: 1rem; gap-bottom: 1rem; }
+  .gap-y-8 { gap-top: 1.25rem; gap-bottom: 1.25rem; }
+}
