@@ -299,6 +299,27 @@ const ScreenshotGalleryPage = ({ project }: { project: NonNullable<ReturnType<ty
           transform: scale(1.08);
         }
         .nav-arrow:active { transform: scale(0.95); }
+        /* ── Mobile: overlay arrows so image fills full width ── */
+        @media (max-width: 640px) {
+          .gallery-row {
+            position: relative;
+          }
+          .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 36px;
+            height: 36px;
+            background: rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+          }
+          .nav-arrow:active { transform: translateY(-50%) scale(0.9); }
+          .nav-arrow-prev { left: 10px; }
+          .nav-arrow-next { right: 10px; }
+        }
         .dot-btn {
           width: 8px;
           height: 8px;
@@ -389,6 +410,7 @@ const ScreenshotGalleryPage = ({ project }: { project: NonNullable<ReturnType<ty
       >
         {/* Left arrow · image · right arrow */}
         <div
+          className="gallery-row"
           style={{
             display: "flex",
             alignItems: "center",
@@ -398,11 +420,11 @@ const ScreenshotGalleryPage = ({ project }: { project: NonNullable<ReturnType<ty
           }}
         >
           <button
-            className="nav-arrow"
+            className="nav-arrow nav-arrow-prev"
             onClick={() => goTo((active - 1 + imgs.length) % imgs.length)}
             aria-label="Previous screenshot"
           >
-            <ArrowLeft style={{ width: 22, height: 22 }} />
+            <ArrowLeft style={{ width: 20, height: 20 }} />
           </button>
 
           <div
@@ -433,11 +455,11 @@ const ScreenshotGalleryPage = ({ project }: { project: NonNullable<ReturnType<ty
           </div>
 
           <button
-            className="nav-arrow"
+            className="nav-arrow nav-arrow-next"
             onClick={() => goTo((active + 1) % imgs.length)}
             aria-label="Next screenshot"
           >
-            <ArrowUpRight style={{ width: 22, height: 22, transform: "rotate(45deg)" }} />
+            <ArrowUpRight style={{ width: 20, height: 20, transform: "rotate(45deg)" }} />
           </button>
         </div>
 
