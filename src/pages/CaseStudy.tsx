@@ -23,10 +23,10 @@ const CaseStudy = () => {
     return (
       <div className="min-h-screen bg-background text-foreground">
         <SiteNav />
-        <div className="editorial-container py-40 text-center">
-          <p className="mono-label">Not found</p>
-          <h1 className="mt-6 font-display text-4xl">This case study doesn't exist.</h1>
-          <Link to="/" className="mt-8 inline-block link-underline font-mono text-[11px] uppercase tracking-[0.18em]">
+        <div className="editorial-container py-16 sm:py-24 md:py-40 text-center">
+          <p className="mono-label text-[9px] sm:text-[10px]">Not found</p>
+          <h1 className="mt-4 sm:mt-6 font-display text-2xl sm:text-4xl">This case study doesn't exist.</h1>
+          <Link to="/" className="mt-4 sm:mt-8 inline-block link-underline font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.18em]">
             ← Back home
           </Link>
         </div>
@@ -48,36 +48,36 @@ const CaseStudy = () => {
       <article>
         {/* Header */}
         <header className="border-b border-rule">
-          <div className="editorial-container pt-16 md:pt-24 pb-16 md:pb-24">
+          <div className="editorial-container pt-8 sm:pt-12 md:pt-24 pb-8 sm:pb-12 md:pb-24">
             <button
               onClick={() => navigate(-1)}
-              className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground cursor-pointer bg-transparent border-none p-0"
+              className="inline-flex items-center gap-2 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground cursor-pointer bg-transparent touch-target"
             >
-              <ArrowLeft className="h-3.5 w-3.5" /> Back to work
+              <ArrowLeft className="h-3 w-3 sm:h-3.5 sm:w-3.5" /> Back to work
             </button>
 
-            <div className="mt-10 grid grid-cols-12 gap-x-10 gap-y-8">
+            <div className="mt-6 sm:mt-8 md:mt-10 grid grid-cols-12 gap-x-3 sm:gap-x-6 md:gap-x-10 gap-y-4 sm:gap-y-6 md:gap-y-8">
               <div className="col-span-12 md:col-span-8">
-                <p className="mono-label">
+                <p className="mono-label text-[9px] sm:text-[10px]">
                   Case {project.number} · {project.category} · {project.year}
                 </p>
-                <h1 className="mt-6 font-display text-5xl leading-[1.02] tracking-[-0.025em] md:text-7xl text-balance">
+                <h1 className="mt-3 sm:mt-4 md:mt-6 font-display text-2xl sm:text-3xl md:text-5xl leading-[1.02] tracking-[-0.025em] md:text-7xl text-balance">
                   {project.title}
                 </h1>
               </div>
               <div className="col-span-12 md:col-span-4 md:pt-2">
-                <p className="text-lg leading-relaxed text-muted-foreground text-pretty">
+                <p className="text-xs sm:text-sm leading-relaxed text-muted-foreground text-pretty md:text-lg">
                   {project.description}
                 </p>
                 {project.github && (
-                  <div className="mt-6">
+                  <div className="mt-4 sm:mt-6">
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground hover:text-primary transition-colors border-b border-foreground/30 pb-0.5"
+                      className="inline-flex items-center gap-2 font-mono text-[9px] sm:text-[11px] uppercase tracking-[0.18em] text-foreground hover:text-primary transition-colors border-b border-foreground/30 hover:border-primary pb-1 touch-target"
                     >
-                      View Repository <ArrowUpRight className="h-3.5 w-3.5" />
+                      View Repository <ArrowUpRight className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                     </a>
                   </div>
                 )}
@@ -88,14 +88,14 @@ const CaseStudy = () => {
 
         {/* Hero Image */}
         {project.heroImage && (
-          <div className="editorial-container pt-10 pb-0">
+          <div className="editorial-container pt-6 sm:pt-8 md:pt-10 pb-0 px-2 sm:px-4 md:px-0">
             <div
               style={{
                 background: "#111",
-                borderRadius: "12px",
+                borderRadius: "8px",
                 border: "1px solid rgba(255,255,255,0.08)",
                 boxShadow: "0 0 0 1px #7ec8b030, 0 20px 60px rgba(126,200,176,0.08)",
-                padding: "12px",
+                padding: "8px",
                 overflow: "hidden",
               }}
             >
@@ -107,7 +107,7 @@ const CaseStudy = () => {
                   height: "auto",
                   maxHeight: "520px",
                   objectFit: "cover",
-                  borderRadius: "8px",
+                  borderRadius: "6px",
                   display: "block",
                   animation: "heroZoomIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both",
                 }}
@@ -123,7 +123,7 @@ const CaseStudy = () => {
         )}
 
         {/* Sections */}
-        <div className="editorial-container py-20 md:py-28">
+        <div className="editorial-container py-12 sm:py-16 md:py-28">
           <Section label="01" title="Overview">
             <p>{project.overview}</p>
           </Section>
@@ -133,13 +133,13 @@ const CaseStudy = () => {
           </Section>
 
           <Section label="03" title="Process">
-            <ol className="space-y-6">
+            <ol className="space-y-4 sm:space-y-6">
               {project.process.map((step, i) => (
-                <li key={i} className="grid grid-cols-12 gap-x-6">
+                <li key={i} className="grid grid-cols-12 gap-x-3 sm:gap-x-6">
                   <span className="col-span-2 md:col-span-1 font-mono text-xs text-muted-foreground">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="col-span-10 md:col-span-11">{step}</span>
+                  <span className="col-span-10 md:col-span-11 text-sm sm:text-base">{step}</span>
                 </li>
               ))}
             </ol>
@@ -150,11 +150,11 @@ const CaseStudy = () => {
           </Section>
 
           <Section label="05" title="Technologies">
-            <ul className="flex flex-wrap gap-2">
+            <ul className="flex flex-wrap gap-1.5 sm:gap-2">
               {project.technologies.map((t) => (
                 <li
                   key={t}
-                  className="rounded-sm border border-rule px-3 py-1.5 font-mono text-xs text-foreground/80"
+                  className="rounded-sm border border-rule px-2 py-1 sm:px-3 sm:py-1.5 font-mono text-[10px] sm:text-xs text-foreground/80"
                 >
                   {t}
                 </li>
@@ -166,12 +166,12 @@ const CaseStudy = () => {
         {/* Next */}
         <div className="border-t border-rule">
           <Link to={`/work/${next.slug}`} className="group block">
-            <div className="editorial-container grid grid-cols-12 items-baseline gap-x-6 py-16">
-              <span className="col-span-12 md:col-span-3 mono-label">Next case study</span>
-              <span className="col-span-10 md:col-span-8 font-display text-4xl tracking-[-0.02em] transition-colors group-hover:text-primary md:text-5xl">
+            <div className="editorial-container grid grid-cols-12 items-baseline gap-x-3 sm:gap-x-6 md:gap-x-6 py-12 sm:py-16 md:py-16">
+              <span className="col-span-12 md:col-span-3 mono-label text-[9px] sm:text-[10px]">Next case study</span>
+              <span className="col-span-10 md:col-span-8 font-display text-xl sm:text-2xl md:text-4xl tracking-[-0.02em] transition-colors group-hover:text-primary md:text-5xl">
                 {next.title}
               </span>
-              <ArrowUpRight className="col-span-2 md:col-span-1 ml-auto h-6 w-6 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              <ArrowUpRight className="col-span-2 md:col-span-1 ml-auto h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </div>
           </Link>
         </div>
@@ -237,15 +237,17 @@ const ScreenshotGalleryPage = ({ project }: { project: NonNullable<ReturnType<ty
           background: rgba(255,255,255,0.04);
           border: 1px solid rgba(255,255,255,0.12);
           border-radius: 999px;
-          padding: 10px 22px;
+          padding: 8px 16px;
           font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
-          font-size: 13px;
+          font-size: clamp(11px, 2vw, 13px);
           font-weight: 500;
           letter-spacing: 0.01em;
           color: rgba(255,255,255,0.9);
           text-decoration: none;
           transition: background 0.2s, border-color 0.2s, color 0.2s;
           white-space: nowrap;
+          min-height: 40px;
+          display: inline-flex;
         }
         .github-pill:hover {
           background: rgba(255,255,255,0.09);
@@ -259,15 +261,17 @@ const ScreenshotGalleryPage = ({ project }: { project: NonNullable<ReturnType<ty
           background: rgba(255,255,255,0.06);
           border: 1px solid rgba(255,255,255,0.12);
           border-radius: 8px;
-          padding: 10px 18px;
+          padding: 8px 14px;
           font-family: 'Inter', system-ui, sans-serif;
-          font-size: 13px;
+          font-size: clamp(11px, 2vw, 13px);
           font-weight: 600;
           letter-spacing: 0.04em;
           text-transform: uppercase;
           color: rgba(255,255,255,0.85);
           text-decoration: none;
           transition: background 0.2s, border-color 0.2s, color 0.2s;
+          min-height: 40px;
+          touch-action: manipulation;
         }
         .back-btn:hover {
           background: rgba(255,255,255,0.12);
@@ -278,8 +282,8 @@ const ScreenshotGalleryPage = ({ project }: { project: NonNullable<ReturnType<ty
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 48px;
-          height: 48px;
+          width: clamp(40px, 10vw, 48px);
+          height: clamp(40px, 10vw, 48px);
           border-radius: 50%;
           border: 1px solid rgba(255,255,255,0.14);
           background: rgba(255,255,255,0.06);
@@ -287,6 +291,7 @@ const ScreenshotGalleryPage = ({ project }: { project: NonNullable<ReturnType<ty
           cursor: pointer;
           transition: background 0.2s, border-color 0.2s, transform 0.15s;
           flex-shrink: 0;
+          touch-action: manipulation;
         }
         .nav-arrow:hover {
           background: rgba(255,255,255,0.14);
@@ -303,18 +308,30 @@ const ScreenshotGalleryPage = ({ project }: { project: NonNullable<ReturnType<ty
           cursor: pointer;
           transition: all 0.25s;
           padding: 0;
+          min-width: 32px;
+          min-height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
-        .dot-btn.active { background: #fff; transform: scale(1.3); }
-        .dot-btn:not(.active) { background: rgba(255,255,255,0.25); }
-        .dot-btn:not(.active):hover { background: rgba(255,255,255,0.5); }
+        .dot-btn::after {
+          content: '';
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          display: block;
+        }
+        .dot-btn.active::after { background: #fff; transform: scale(1.3); }
+        .dot-btn:not(.active)::after { background: rgba(255,255,255,0.25); }
+        .dot-btn:not(.active):hover::after { background: rgba(255,255,255,0.5); }
         .tech-chip {
           display: inline-block;
-          padding: 6px 14px;
+          padding: 6px 12px;
           border-radius: 999px;
           border: 1px solid rgba(255,255,255,0.12);
           background: rgba(255,255,255,0.04);
           font-family: 'JetBrains Mono', 'Fira Mono', monospace;
-          font-size: 11px;
+          font-size: clamp(10px, 1.5vw, 11px);
           letter-spacing: 0.06em;
           color: rgba(255,255,255,0.6);
           transition: background 0.18s, color 0.18s, border-color 0.18s;
@@ -333,7 +350,7 @@ const ScreenshotGalleryPage = ({ project }: { project: NonNullable<ReturnType<ty
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "20px 32px",
+          padding: "clamp(12px, 3vw, 20px) clamp(16px, 4vw, 32px)",
           borderBottom: "1px solid rgba(255,255,255,0.07)",
           flexWrap: "wrap",
           gap: "12px",
@@ -352,7 +369,7 @@ const ScreenshotGalleryPage = ({ project }: { project: NonNullable<ReturnType<ty
             className="github-pill"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style={{ opacity: 0.8 }}>
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-1.02-1.5.015-.765.555-1.095 1.005-1.23.45-.135 1.14-.18 1.62.135.45.315 1.065.885 1.18 1.32.12.63.765 1.29 1.35 1.395.54.105 1.045.03 1.38-.2.135-.765.555-1.44 1.08-1.98-3.3-.3-6.7-1.64-6.7-7.215 0-1.59.465-3.09 1.335-4.29-.135-.3-.6-1.5.135-3.12 0 0 1.08-.345 3.54 1.34.96-.27 2.04-.405 3.12-.405 1.08 0 2.16.135 3.12.405 2.46-1.685 3.54-1.34 3.54-1.34.735 1.62.27 2.82.135 3.12.87 1.2 1.335 2.7 1.335 4.29 0 5.58-3.4 6.915-6.7 7.215.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.225.69.825.57C20.565 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12z" />
             </svg>
             {githubLabel ?? `${project.title}  ·  Read Documentation on Github`}
             <ExternalLink style={{ width: 14, height: 14, opacity: 0.6 }} />
@@ -368,7 +385,7 @@ const ScreenshotGalleryPage = ({ project }: { project: NonNullable<ReturnType<ty
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          padding: "40px 24px 52px",
+          padding: "clamp(20px, 5vw, 40px) clamp(16px, 4vw, 24px) clamp(30px, 8vw, 52px)",
         }}
       >
         {/* Left arrow · image · right arrow */}
@@ -376,7 +393,7 @@ const ScreenshotGalleryPage = ({ project }: { project: NonNullable<ReturnType<ty
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "20px",
+            gap: "clamp(12px, 3vw, 20px)",
             width: "100%",
             maxWidth: "1080px",
           }}
@@ -426,7 +443,7 @@ const ScreenshotGalleryPage = ({ project }: { project: NonNullable<ReturnType<ty
         </div>
 
         {/* Dot indicators */}
-        <div style={{ display: "flex", gap: "10px", alignItems: "center", marginTop: "22px" }}>
+        <div style={{ display: "flex", gap: "10px", alignItems: "center", marginTop: "22px", flexWrap: "wrap", justifyContent: "center" }}>
           {imgs.map((_, i) => (
             <button
               key={i}
@@ -489,12 +506,12 @@ const Section = ({
   title: string;
   children: React.ReactNode;
 }) => (
-  <section className="grid grid-cols-12 gap-x-10 gap-y-6 border-t border-rule py-14 first:border-t-0 first:pt-0">
+  <section className="grid grid-cols-12 gap-x-3 sm:gap-x-6 md:gap-x-10 gap-y-4 sm:gap-y-6 border-t border-rule py-8 sm:py-12 md:py-14 first:border-t-0 first:pt-0">
     <div className="col-span-12 md:col-span-3">
-      <p className="mono-label">§ {label}</p>
-      <h2 className="mt-3 font-display text-2xl tracking-[-0.015em]">{title}</h2>
+      <p className="mono-label text-[9px] sm:text-[10px]">§ {label}</p>
+      <h2 className="mt-2 sm:mt-3 font-display text-lg sm:text-xl md:text-2xl tracking-[-0.015em]">{title}</h2>
     </div>
-    <div className="col-span-12 md:col-span-9 text-lg leading-relaxed text-foreground/85 text-pretty">
+    <div className="col-span-12 md:col-span-9 text-sm sm:text-base md:text-lg leading-relaxed text-foreground/85 text-pretty">
       {children}
     </div>
   </section>
