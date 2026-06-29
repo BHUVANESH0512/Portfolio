@@ -84,8 +84,41 @@ export const PROJECTS: PROJECTS[] = [
   },
 
   {
-    slug: "metrodocsync",
+    slug: "whatsapp-rag",
     number: "03",
+    title: "WhatsApp RAG",
+    category: "AI & Automation",
+    year: "2025",
+    github: "https://github.com/BHUVANESH0512/Whatsapp_RAG.git",
+    githubLabel: "WhatsApp RAG  Read Documentation on Github",
+    screenshots: [
+      "/projects/whatsapp-rag-s1.png",
+      "/projects/whatsapp-rag-s2.png",
+      "/projects/whatsapp-rag-s3.png",
+      "/projects/whatsapp-rag-s4.png",
+    ],
+    description:
+      "An AI-powered WhatsApp HR assistant that answers employee queries using RAG — pulling answers directly from company knowledge bases, policies, and HR documents over WhatsApp.",
+    overview:
+      "WhatsApp RAG is an intelligent HR assistant built on a Retrieval-Augmented Generation pipeline. Employees ask questions via WhatsApp and receive accurate, document-grounded answers drawn from internal knowledge bases — no hallucinations, full source traceability.",
+    challenge:
+      "HR teams spend significant time answering repetitive policy questions. The challenge was building a system that retrieves precise answers from large unstructured document sets in real-time while maintaining a familiar WhatsApp-native experience.",
+    process: [
+      "Designed a multi-tenant knowledge base ingestion pipeline supporting PDF, DOCX, and Excel formats with automatic chunking and embedding.",
+      "Built a RAG engine with semantic retrieval using vector embeddings and LLM-based answer synthesis with source citations.",
+      "Integrated the WhatsApp Business API as the primary chat interface with a webhook-driven message routing layer.",
+      "Developed an admin dashboard for document management, employee directory, conversation analytics, and access control.",
+    ],
+    outcome:
+      "HR response time dropped significantly with employees getting instant, accurate answers 24/7. The platform surfaces conversation analytics and knowledge gaps, allowing HR teams to proactively improve documentation quality.",
+    technologies: [
+      "React", "TypeScript", "Node.js", "Supabase", "OpenRouter", "Groq", "WhatsApp Business API", "PostgreSQL", "pgvector",
+    ],
+  },
+
+  {
+    slug: "metrodocsync",
+    number: "04",
     title: "MetroDocSync",
     category: "AI Infrastructure",
     year: "2025",
@@ -109,7 +142,7 @@ export const PROJECTS: PROJECTS[] = [
   },
   {
     slug: "colabrey",
-    number: "04",
+    number: "05",
     title: "Colabrey",
     category: "Web Application",
     year: "2025",
@@ -142,7 +175,7 @@ export const PROJECTS: PROJECTS[] = [
 
   {
     slug: "resume-analyzer",
-    number: "05",
+    number: "06",
     title: "Resume Analyzer",
     category: "AI & Machine Learning",
     year: "2025",
