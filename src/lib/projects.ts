@@ -92,10 +92,10 @@ export const PROJECTS: PROJECTS[] = [
     github: "https://github.com/BHUVANESH0512/Whatsapp_RAG.git",
     githubLabel: "WhatsApp RAG  Read Documentation on Github",
     screenshots: [
-      "/projects/whatsapp-rag-s1.png",
-      "/projects/whatsapp-rag-s2.png",
-      "/projects/whatsapp-rag-s3.png",
       "/projects/whatsapp-rag-s4.png",
+      "/projects/whatsapp-rag-s3.png",
+      "/projects/whatsapp-rag-s2.png",
+      "/projects/whatsapp-rag-s1.png",
     ],
     description:
       "An AI-powered WhatsApp HR assistant that answers employee queries using RAG — pulling answers directly from company knowledge bases, policies, and HR documents over WhatsApp.",
